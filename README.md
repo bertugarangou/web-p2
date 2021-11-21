@@ -1,5 +1,6 @@
 # web-p2
-´"scripts": {
+``
+"scripts": {
     "build": "npm run delete && npm run deletefolder && npm run createfolder && npm run minifier && npm run copymedia && npm run copyfont && npm run cssmini && npm run cssmini-normalize && npm run jsmini2 && npm run jsmini1 && npm run checklinks",
     "start": "node app.js",
     "deletefolder": "Rmdir /S/Q .\\dist",
@@ -13,4 +14,5 @@
     "jsmini2":"uglifyjs .\\src\\js\\pages\\form.js -o .\\dist\\js\\pages\\form.js",
     "minifier": "html-minifier --input-dir src --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-js true --minify-css true",
     "copymedia": "xcopy /i/s/r/h/y .\\src\\media\\ .\\dist\\media"
-  },´
+  },
+  ``
