@@ -1,0 +1,112 @@
+/*PRINCIPALS*/
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: sans-serif, Arial, Helvetica;
+    transition: all 0.2s cubic-bezier(.22, .78, .51, .95);/*Quan es faci resize es mouen els elements de manera més "smooth" */
+    background-color: red;
+    font-size: 1.8vw;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    height: auto;
+}
+
+body{
+    width: 95%;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+/***APARTAT HEADER****/
+header{
+    display: flex;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    font-size: 3vw;
+}
+
+header img{
+    width: auto;
+    height: 5vw;
+    justify-self: left;
+}
+
+/***MAIN****/
+main {
+    height: auto;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***APARTAT BUSCADOR****/
+.searchContainer{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    background-color: grey;
+}
+.searchContainer button{
+    background-color: green;
+    width: 7vw;
+    height: auto;
+    color: black;
+    font-size: 1vw;
+    line-height: 1vw;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.searchInput{
+    width: 20vw;
+    height: 2.5vw;
+}
+
+.characterList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    background-color: rgb(196, 190, 190);
+}
+.characterList img{
+    margin-left: 2vw;
+    width: 15vw;
+    height: auto;
+}
+.characterContainer {
+    background-color: rgb(235, 230, 230);
+    width: 40vw;
+}
+
+.characterList button {
+    color: rgb(255, 208, 0);
+    border: none;
+    background-color: transparent;
+}
+
+.characterContainer2 {
+    background-color: rgb(235, 230, 230);
+    width: 70vw;
+}
+
+/************************************************************************************************************************/
+/***************************************************@MEDIA PC*************************************************************/
+/************************************************************************************************************************/
+@media (min-width: 700px){
+    *{
+        background-color: white;
+    }
+}
