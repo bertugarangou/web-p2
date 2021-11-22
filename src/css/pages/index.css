@@ -92,7 +92,6 @@ main {
     display: flex;
     flex-direction: row;
 }
-
 .characterContainer section{
     background-color: rgb(235, 230, 230);
     width: 40vw;
@@ -107,8 +106,20 @@ main {
 }
 
 .characterContainer2 {
+    display: flex;
+    flex-direction: row;
     background-color: rgb(235, 230, 230);
     width: 70vw;
+}
+.characterContainer2 .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.characterContainer2 .right section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /************************************************************************************************************************/
