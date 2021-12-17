@@ -1,0 +1,2 @@
+`sandbox.config.json` is a codesandbox.io configuration file and sets the environment to `node`, otherwise codensandbox understands that it is a vue-client code and does not execute node.
+`Procfile` is a heroku.com configuration file so heroku knows how to deploy the project.
