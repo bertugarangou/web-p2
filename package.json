@@ -27,7 +27,9 @@
   "license": "ISC",
   "homepage": "https://github.com/bertugarangou/web-p2#readme",
   "dependencies": {
-    "express": "4.17.1"
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "fs": "*"
   },
   "devDependencies": {
     "uglify-js": "3.14.3",
