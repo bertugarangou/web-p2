@@ -11,7 +11,10 @@
     <META NAME="robots" CONTENT="nofollow">
     <META name="description" content="Main Page for selecting and operate">
     <META name="keywords" content="API, overwatch, async, functions">
-    <script defer src="./js/pages/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script defer src="./js/pages/index.js"></script> -->
+    <script defer src="js/pages/index.js" type="module"></script>
     <link rel="icon" href="./media/img/icon.png">
 </head>
 
@@ -21,12 +24,24 @@
         <h1>OVERWATCH CHARACTERS</h1>
     </header>
     <main>
-        <form class="searchContainer" action="/api/detail" method="POST">
-            <button>SEARCH</button>
-            <input class="searchInput" type="search" name="key" placeholder="Search here">
+        <!--
+
+        <form class="searchContainer">
+            <button v-on:click="loadData()">SEARCH</button>
+            <input class="searchInput" id="search" type="search" name="key" placeholder="Search here">
         </form>
-        <div class="characterList">
-            <!--Example Character Sense Desplegar-->
+        -->
+        
+        <search-form class="searchContainer"></search-form>
+        <p v-if="searchInput">{{ searchInput }}</p>
+        <div class="characterList" id="appOverWatch">
+            <heroe-container
+                v-for="heroe in heroes"
+                v-bind:data="heroe"
+                v-bind:key="heroe.key"
+            ></heroe-container>
+            <!--
+
             <div class="characterContainer">
                 <img src="./media/img/hanzo.jpeg" alt="Image of character" width="1019" height="1100">
                 <section>
@@ -37,7 +52,7 @@
                 </section>
             </div>
 
-            <!--Example Character Desplegat-->
+
             <div class="characterContainer2">
                 <div class="left">
                     <p>Mercy</p>
@@ -75,7 +90,7 @@
                     <button>+</button>
                 </section>
             </div>
+        -->
         </div>
-
     </main>
 </body>
