@@ -21,10 +21,10 @@
         <h1>OVERWATCH CHARACTERS</h1>
     </header>
     <main>
-        <div class="searchContainer">
+        <form class="searchContainer" action="/api/detail" method="POST">
             <button>SEARCH</button>
-            <input class="searchInput" type="search" placeholder="Search here">
-        </div>
+            <input class="searchInput" type="search" name="key" placeholder="Search here">
+        </form>
         <div class="characterList">
             <!--Example Character Sense Desplegar-->
             <div class="characterContainer">
