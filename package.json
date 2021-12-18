@@ -28,7 +28,12 @@
   "homepage": "https://github.com/bertugarangou/web-p2#readme",
   "dependencies": {
     "cors": "^2.8.5",
+<<<<<<< HEAD
     "express": "4.17.1"
+=======
+    "express": "4.17.1",
+    "fs": "*"
+>>>>>>> 95269682ff2ca309c4840dcb89d561ec7dd41cfd
   },
   "devDependencies": {
     "uglify-js": "3.14.3",

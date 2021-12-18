@@ -3,7 +3,7 @@ const https = require('https')
 const fs = require('fs')
 const cors = require('cors')
 const app = express()
-const PORT = 3000
+const PORT = 5500
 
 app.use(express.static('src'))
 
