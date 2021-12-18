@@ -21,6 +21,22 @@
         <h1>OVERWATCH CHARACTERS</h1>
     </header>
     <main>
+        <script>
+            fetch('http://localhost:5500/api/list?search=', {
+                    method: 'GET'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data[0]["key"])
+                })
+                .catch((error) => {
+                    console.error('Error:', error)
+                })
+        </script>
+        <form action="/api/detail" method="POST">
+            <input type="input" name="key">
+            <button>Submit</button>
+        </form>
         <div class="searchContainer">
             <button>SEARCH</button>
             <input class="searchInput" type="search" placeholder="Search here">
