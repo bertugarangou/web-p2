@@ -23,7 +23,7 @@
         <img src="./media/img/Logo-Overwatch.png" alt="pageLogo">
         <h1>OVERWATCH CHARACTERS</h1>
     </header>
-    <main>
+    <main id="appOverWatch">
         <!--
 
         <form class="searchContainer">
@@ -31,10 +31,11 @@
             <input class="searchInput" id="search" type="search" name="key" placeholder="Search here">
         </form>
         -->
-        
         <search-form class="searchContainer"></search-form>
+
         <p v-if="searchInput">{{ searchInput }}</p>
-        <div class="characterList" id="appOverWatch">
+        
+        <div class="characterList" >
             <heroe-container
                 v-for="heroe in heroes"
                 v-bind:data="heroe"

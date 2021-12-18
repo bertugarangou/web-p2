@@ -3,13 +3,15 @@ import {} from "../components/searchForm.js";
 
 var app = new Vue({
     el: '#appOverWatch',
-    data: {
-      heroes: [],
-      heroesdata: ""
+    data: () => {
+      return {
+        heroes: [],
+        heroesdata: "",
+        searchInput: ""
+      };
     },
     methods: {
         loadData(key) {
-          console.log("hola perramen")
           console.log(key)
             fetch('https://localhost:5500/api/list' + key)
                 .then(response => response.json())
