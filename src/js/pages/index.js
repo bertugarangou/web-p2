@@ -6,7 +6,6 @@ var app = new Vue({
     data: () => {
       return {
         heroes: [],
-        heroesdata: "",
         searchInput: ""
       };
     },

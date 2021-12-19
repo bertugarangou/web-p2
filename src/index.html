@@ -13,7 +13,6 @@
     <META name="keywords" content="API, overwatch, async, functions">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <!-- <script defer src="./js/pages/index.js"></script> -->
     <script defer src="js/pages/index.js" type="module"></script>
     <link rel="icon" href="./media/img/icon.png">
 </head>
@@ -34,12 +33,14 @@
         <search-form class="searchContainer"></search-form>
 
         <p v-if="searchInput">{{ searchInput }}</p>
+        <p>{{ heroes[0] }}</p>
         
         <div class="characterList" >
             <heroe-container
                 v-for="heroe in heroes"
                 v-bind:data="heroe"
                 v-bind:key="heroe.key"
+                
             ></heroe-container>
             <!--
 

@@ -4,7 +4,7 @@
     font-weight: normal;
     font-family: sans-serif, Arial, Helvetica;
     transition: all 0.2s cubic-bezier(.22, .78, .51, .95);/*Quan es faci resize es mouen els elements de manera més "smooth" */
-    background-color: red;
+    background-color: white;
     font-size: 1.8vw;
 }
 

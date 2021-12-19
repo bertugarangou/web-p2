@@ -1,4 +1,8 @@
+/*const { response } = require("express");*/
 Vue.component("search-form", {
+  props: {
+    datos: Object
+  },
   data: () => {
     return {
       searchInput: "",
@@ -6,18 +10,23 @@ Vue.component("search-form", {
     };
   },
   template: `
-    <form v-on:submit.prevent="search">
+    <div>
       <input type="text" v-model="searchInput">
-      <input type="submit" value="search">
-    </form>`,
+      <button v-on:click="loadHeroeData">search</button>
+    </div>`,
   methods: {
-    search(event) {
-      console.log(this.searchInput);
-      this.$root.searchInput = this.searchInput;
-      fetch('https://localhost:5500/api/list' + this.searchInput)
-      .then(response => response.json())
-      .then(data => this.heroese = data);
-      console.log(this.heroese);
-    }
+
+    loadHeroeData() {
+
+          fetch('http://localhost:5500/api/list?search=' + this.searchInput)
+          .then(response => response.json())
+          .then(datos => this.$parent.heroes = datos)
+          .catch(err => {
+            console.log('Error al hacer el get');
+            console.log(this.$parent.hearoes);
+          });
+          console.log(this.$parent.heroes);
+          
+  }
   }
 });
