@@ -5,7 +5,7 @@ var app = new Vue({
     el: '#appOverWatch',
     data: () => {
       return {
-        heroes: [],
+        heroes: "",
         searchInput: ""
       };
     },

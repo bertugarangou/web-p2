@@ -20,12 +20,15 @@ Vue.component("search-form", {
 
           fetch('http://localhost:5500/api/list?search=' + this.searchInput)
           .then(response => response.json())
-          .then(datos => this.$parent.heroes = datos)
+          .then(datos => {
+            
+            this.$root.heroes = datos;
+            console.log(this.$root.heroes );
+          })
           .catch(err => {
-            console.log('Error al hacer el get');
-            console.log(this.$parent.hearoes);
+            console.log('Error: '+ err);
           });
-          console.log(this.$parent.heroes);
+         // console.log('Valor pasado:' + this.$parent.heroes);
           
   }
   }

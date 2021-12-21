@@ -11,12 +11,5 @@ Vue.component('heroe-container', {
                 <p>Occupation: {{ data.role }}</p>
                 <button>+</button>
             </section>
-        </div>`,
-    methods: {
-        loadData() {
-            fetch('https://localhost:5500/api/list' + this.data.key)
-                .then(response => response.json())
-                .then(data => this.$parent.heroesdata = data.abilities[0].ability.name);
-        }
-      }
+        </div>`
   })

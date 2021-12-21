@@ -32,17 +32,19 @@
         -->
         <search-form class="searchContainer"></search-form>
 
-        <p v-if="searchInput">{{ searchInput }}</p>
-        <p>{{ heroes[0] }}</p>
-        
-        <div class="characterList" >
+        <!--  <p v-if="searchInput">{{ searchInput }}</p>-->
+        <p v-if="heroes.length">{{ heroes[0].key }}</p>
+        <!--
+            <div class="characterList" >
             <heroe-container
                 v-for="heroe in heroes"
                 v-bind:data="heroe"
                 v-bind:key="heroe.key"
                 
-            ></heroe-container>
-            <!--
+            >
+                
+            </heroe-container>
+            
 
             <div class="characterContainer">
                 <img src="./media/img/hanzo.jpeg" alt="Image of character" width="1019" height="1100">
@@ -92,7 +94,7 @@
                     <button>+</button>
                 </section>
             </div>
-        -->
-        </div>
+       
+        </div> -->
     </main>
 </body>
