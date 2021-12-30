@@ -19,32 +19,24 @@
 
 <body>
     <header>
-        <img src="./media/img/Logo-Overwatch.png" alt="pageLogo">
-        <h1>OVERWATCH CHARACTERS</h1>
+        <img src="./media/img/overwatch-logo.png" alt="pageLogo">
+        <h1>OVERWATCH API</h1>
     </header>
     <main id="appOverWatch">
         <!--
-
         <form class="searchContainer">
             <button v-on:click="loadData()">SEARCH</button>
             <input class="searchInput" id="search" type="search" name="key" placeholder="Search here">
         </form>
         -->
         <search-form class="searchContainer"></search-form>
-
-        
-        
-        
-        <div   class="characterList" >
-            <p v-if="heroes.length" >{{ heroes[0].key }}</p>
-            
+        <div class="characterList">
+            <p v-if="heroes.length"></p>
             <heroe-container 
                 v-if="heroes.length"
                 v-for="heroe in heroes"
                 v-bind:datos="heroe"
-                v-bind:link="heroe.portrait"
-                
-            >
+                v-bind:link="heroe.portrait">
             </heroe-container>
         </div>    
             <!--
