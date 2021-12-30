@@ -8,15 +8,7 @@ var app = new Vue({
         heroes: "",
         searchInput: ""
       };
-    },
-    methods: {
-        loadData(key) {
-          console.log(key)
-            fetch('https://localhost:5500/api/list' + key)
-                .then(response => response.json())
-                .then(data => this.$parent.heroes = data);
-        }
-      }
+    }
   })
 
 

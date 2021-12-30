@@ -1,15 +1,15 @@
 Vue.component('heroe-container', {
     props: {
-        data: Object
+        datos: Object,
+        link: String
       },
     template: 
-        `<div class="characterContainer">
-            <img src={{ data.portrait }} alt="Image of character" width="1019" height="1100">
-            <section>
-                <h2>{{ data.name }}</h2>
-                
-                <p>Occupation: {{ data.role }}</p>
-                <button>+</button>
-            </section>
-        </div>`
+    `<div class="characterContainer" >
+    <img :src=link  alt="Image of character" width="1019" height="1100">
+        <section>
+            <h2>{{ datos.name }}</h2>
+            <p>Occupation: {{ datos.role }}</p>
+            <button>+</button>
+        </section>
+    </div>`
   })

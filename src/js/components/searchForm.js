@@ -1,12 +1,10 @@
 /*const { response } = require("express");*/
 Vue.component("search-form", {
-  props: {
-    datos: Object
-  },
+
   data: () => {
     return {
       searchInput: "",
-      heroese: []
+      heroes: []
     };
   },
   template: `
@@ -22,8 +20,8 @@ Vue.component("search-form", {
           .then(response => response.json())
           .then(datos => {
             
-            this.$root.heroes = datos;
-            console.log(this.$root.heroes );
+            this.$parent.heroes = datos;
+            console.log(this.$parent.heroes );
           })
           .catch(err => {
             console.log('Error: '+ err);
