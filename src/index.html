@@ -24,10 +24,10 @@
     </header>
     <main id="appOverWatch">
         <form class="searchContainer">
-            <button v-on:click="loadData()">SEARCH</button>
-            <input class="searchInput" id="search" type="search" name="key" placeholder="Search here">
+            <input class="searchInputClass" type="search" v-model="searchInput" placeholder="Search here">
+            <button v-on:click="loadHeroeData">SEARCH</button>
         </form>
-        <search-form class="searchContainer"></search-form>
+         <search-form class="searchContainer"></search-form>  
         <div class="characterList">
             <p v-if="heroes.length"></p>
             <heroe-container 
