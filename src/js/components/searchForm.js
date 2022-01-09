@@ -21,6 +21,11 @@ Vue.component("search-form", {
           .then(datos => {
             
             this.$parent.heroes = datos;
+            
+            for (var i = 0; i< this.$parent.heroes.length; i++) {
+              this.$parent.heroes[i].flag_big = false;
+            }
+            
             console.log(this.$parent.heroes );
           })
           .catch(err => {

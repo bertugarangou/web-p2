@@ -83,6 +83,9 @@ main {
     line-height: 1vw;
     font-weight: bold;
 }
+.searchContainer button:hover{
+    background-color: red;
+}
 
 .searchInput{
     width: 20vw;
@@ -141,7 +144,10 @@ main {
     font-size: 7vh;
     margin-right: 2vw;
 }
-
+.characterList button:hover {
+    color: blue;
+    cursor: pointer;
+  }
 .characterContainer2 {
     display: flex;
     flex-direction: row;

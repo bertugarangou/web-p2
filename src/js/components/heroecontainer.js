@@ -7,17 +7,31 @@ Vue.component('heroe-container', {
   props: {
       datos: Object,
       link: String,
-      random: Math.floor(Math.random() * 99) + 1
+      flag_big: Boolean
   },
-  template: 
-  `<div class="characterContainer" >
+  template:
+  `<div class="characterContainer" v-if="!flag_big">
     <img :src=link  alt="Image of character" width="1019" height="1100">
+    <section >
+        <h2>{{ datos.name }}</h2>
+        <p>Age: {{ random() }}</p>
+        <p>Occupation: {{ datos.role }}</p>
+        <button v-on:click="flag_big=true ">+</button>
+    </section>
+  </div>
+  
+  <div class="characterContainer2" v-else>
+    <img :src=link  alt="Image of character2" width="1019" height="1100">
     <section>
         <h2>{{ datos.name }}</h2>
         <p>Age: {{ random() }}</p>
         <p>Occupation: {{ datos.role }}</p>
-        <button>+</button>
+        <p>Base of operations: {{  }}</p>
+        <p>Affiliation: {{  }}</p>
+        <p>Lore</p>
+        <p>{{ datos.message }}</p>
+        <button v-on:click="flag_big=false">-</button>
     </section>
-  </div>`
+  </div>
+  `
 })
-

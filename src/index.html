@@ -23,12 +23,10 @@
         <h1>OVERWATCH API</h1>
     </header>
     <main id="appOverWatch">
-        <!--
         <form class="searchContainer">
             <button v-on:click="loadData()">SEARCH</button>
             <input class="searchInput" id="search" type="search" name="key" placeholder="Search here">
         </form>
-        -->
         <search-form class="searchContainer"></search-form>
         <div class="characterList">
             <p v-if="heroes.length"></p>
@@ -36,59 +34,11 @@
                 v-if="heroes.length"
                 v-for="heroe in heroes"
                 v-bind:datos="heroe"
+                v-bind:flag_big="heroe.flag_big"
                 v-bind:link="heroe.portrait">
             </heroe-container>
         </div>    
-            <!--
-            <div class="characterContainer">
-                <img src="./media/img/hanzo.jpeg" alt="Image of character" width="1019" height="1100">
-                <section>
-                    <h2>Hanzo</h2>
-                    <p>Age: 38</p>
-                    <p>Occupation: Mercenary</p>
-                    <button>+</button>
-                </section>
-            </div>
 
-
-            <div class="characterContainer2">
-                <div class="left">
-                    <p>Mercy</p>
-                    <img src="./media/img/mercy.jpg" alt="Image of character" width="1019" height="1100">
-                </div>
-                <div class="right">
-                    <p>Age: 38</p>
-                    <p>Occupation: Mercenary</p>
-                    <p>Base of operations: Zürich, Switzerland</p>
-                    <p>Affiliation: Overwatch</p>
-                    <p>Lore</p>
-                    <section>
-                            <h1>LORE</h1>
-                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                            asdjhiubnnnnn</p>
-                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                            asdjhiubnnnnn</p>
-                            <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                            asdjhiubnnnnn</p>
-                    </section>
-                   
-                    <button>-</button>
-                </div>
-
-                </div>
-            <div class="characterContainer">
-                <img src="./media/img/widowmaker.png" alt="Image of character" width="1019" height="1100">
-                <section>
-                    <h2>Hanzo</h2>
-                    <p>Age: 38</p>
-                    <p>Occupation: Mercenary</p>
-                    <button>+</button>
-                </section>
-            </div>
-            -->
         
     </main>
 </body>
