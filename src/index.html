@@ -22,10 +22,10 @@
 <body>
     <header>
         <img src="./media/img/overwatch-logo.png" alt="pageLogo">
-        <h1>OVERWATCH API</h1>
+        <h1> OVERWATCH API</h1>
     </header>
     <main id="appOverWatch">
-        <search-form class="searchContainer"></search-form>
+        <search-form class="searchContainer" placeholder="Search here"></search-form>
         <div class="characterList">
             <p v-if="heroes.length"></p>
             <heroe-container 
@@ -40,9 +40,7 @@
         
     </main>
     <footer>
-        <p>
-            Amb algun sistema operatiu no es pot clicar bé el camp de text del buscador i el botó. Com que és depenent del S.O. s'ha deixat de manera que funcioni prou bé per Mac i Windows i no sols un dels dos.
-        </p>
+        <p>Busca un personatge per "key", rol, nom... O clica "Search" sense cap text per veure'ls tots</p>
         <p>
             By Pau Hinojosa, Alvaro Martínez i Albert Garangou
         </p>

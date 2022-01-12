@@ -1,3 +1,4 @@
+/*No es necessari un media query per pantalles de PC (grans) ja que tot el format és compatible per mobils, tauletes i escriptoris*/
 /*PRINCIPALS*/
 * {
     box-sizing: border-box;
@@ -71,19 +72,26 @@ main {
     align-content: center;
     margin-top: 2vw;
     margin-bottom: 2vw;
-    background-color: red;
+    background-color: transparent;
     height: 200% !important;
 
+}
+input.searchContainer{
+    background-color: white;
 }
 
 .searchContainer button{
     background-color: green;
-    width: 7vw;
-    height: auto;
+    margin-left: 1.9vw;
+    width: 8vw;
+    height: 4vw;
+    justify-self: center;
+    align-self: center;
     color: black;
     font-size: 1vw;
     line-height: 0.8vw;
     font-weight: bold;
+    border-radius: 4px;
 }
 .searchContainer button:hover{
     background-color: red;
@@ -177,13 +185,8 @@ footer *{
     font-size: 1.3vw;
     background-color: rgb(104, 103, 103);
     text-align: center;
-}
-footer :first-child{
-    margin-top: 1vw;
-}
-footer :nth-child(2){
     color: white;
     margin-top: 1vw;
     margin-bottom: 1vw;
-
 }
+/*No es necessari un media query per pantalles de PC (grans) ja que tot el format és compatible per mobils, tauletes i escriptoris*/

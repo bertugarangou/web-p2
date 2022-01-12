@@ -9,9 +9,9 @@ Vue.component("search-form", {
   },
   template: `
     <div>
-      <input type="text" v-model="searchInput">
-      <button v-on:click="loadHeroeData">search</button>
-    </div>`,
+      <input class="searchContainer" type="text" v-model="searchInput" placeholder="Search here">
+      <button v-on:click="loadHeroeData">Search</button>
+    </div>`,  //botó de cerca
   methods: {
 
     loadHeroeData() {
@@ -20,8 +20,10 @@ Vue.component("search-form", {
           .then(response => response.json())
           .then(datos => {
             
+            //passar dades al pare
             this.$parent.heroes = datos;
             
+            //tancar descripcions
             for (var i = 0; i< this.$parent.heroes.length; i++) {
               this.$parent.heroes[i].flag_big = false;
             }
@@ -29,9 +31,9 @@ Vue.component("search-form", {
             console.log(this.$parent.heroes );
           })
           .catch(err => {
-            console.log('Error: '+ err);
+            //console.log('Error: '+ err);
+            //no fer res extra en cas d'error
           });
-         // console.log('Valor pasado:' + this.$parent.heroes);
           
   }
   }

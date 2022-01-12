@@ -1,6 +1,6 @@
 Vue.component('heroe-container', {
   methods: {
-    random() {
+    random() {  //generador d'edats pels camps que falten a la API.
       return Math.floor(Math.random() * 99) + 1;
     }
   },
@@ -9,7 +9,7 @@ Vue.component('heroe-container', {
       link: String,
       flag_big: Boolean
   },
-  template:
+  template: //bloc de codi HTML per un personatge SENSE i AMB descripció oberta
   `<div class="characterContainer" v-if="!flag_big">
     <img :src=link  alt="Image of character" width="1019" height="1100">
     <section >
