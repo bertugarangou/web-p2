@@ -175,7 +175,8 @@ footer *{
     word-wrap: break-word;
     margin-left: 1vw;
     font-size: 1.3vw;
-    background-color: rgb(104, 103, 103) !important;
+    background-color: rgb(104, 103, 103);
+    text-align: center;
 }
 footer :first-child{
     margin-top: 1vw;
