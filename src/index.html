@@ -13,7 +13,9 @@
     <META name="keywords" content="API, overwatch, async, functions">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script defer src="js/pages/index.js" type="module"></script>
+    <script src="./js/components/heroecontainer.js"></script>
+    <script src="./js/components/searchForm.js"></script>
+    <script defer src="js/pages/index.js"></script>
     <link rel="icon" href="./media/img/icon.png">
 </head>
 
@@ -23,10 +25,6 @@
         <h1>OVERWATCH API</h1>
     </header>
     <main id="appOverWatch">
-        <form class="searchContainer">
-            <button v-on:click="loadData()">SEARCH</button>
-            <input class="searchInput" id="search" type="search" name="key" placeholder="Search here">
-        </form>
         <search-form class="searchContainer"></search-form>
         <div class="characterList">
             <p v-if="heroes.length"></p>
@@ -41,4 +39,12 @@
 
         
     </main>
+    <footer>
+        <center>
+            Amb algun sistema operatiu no es pot clicar bé el camp de text del buscador i el botó. Com que és depenent del S.O. s'ha deixat de manera que funcioni prou bé per Mac i Windows i no sols un dels dos.
+        </center>
+        <center>
+            By Pau Hinojosa, Alvaro Martínez i Albert Garangou
+        </center>
+    </footer>
 </body>
