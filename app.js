@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const PORT = 5500
 
-app.use(express.static('dist'))
+app.use(express.static('src'))
 
 app.use(cors({
   origin: '*'

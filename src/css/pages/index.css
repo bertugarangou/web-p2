@@ -29,6 +29,7 @@ html{
 
 body{
     width: 95%;
+    height: 110vh;
     margin-bottom: 10px;
     margin-top: 2px;
     background-color: transparent;
@@ -130,6 +131,7 @@ input.searchContainer{
     width: 40vw;
     display: flex;
     flex-direction: row;
+    margin-top: 3vw;
 }
 
 .characterContainer section{
@@ -158,6 +160,7 @@ input.searchContainer{
     flex-direction: row;
     background-color: rgb(235, 230, 230);
     width: 70vw;
+    margin-top: 3vw;
 }
 
 .characterContainer2 .left{
@@ -172,21 +175,22 @@ input.searchContainer{
     align-items: center;
 }
 /*FOOTER*/
-footer {
-    background-color: rgb(104, 103, 103);
+.section {
+    background-color: transparent;
     width: 100%;
-    bottom: 0;
-    left: 0;
-    position: fixed;
+    margin-top: 20vw;
 }
-footer *{
+.section *{
     word-wrap: break-word;
     margin-left: 1vw;
     font-size: 1.3vw;
-    background-color: rgb(104, 103, 103);
+    background-color: transparent;
     text-align: center;
     color: white;
     margin-top: 1vw;
     margin-bottom: 1vw;
+}
+.section h2{
+    font-size: 1vw;
 }
 /*No es necessari un media query per pantalles de PC (grans) ja que tot el format és compatible per mobils, tauletes i escriptoris*/
