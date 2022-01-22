@@ -93,19 +93,13 @@ input.searchContainer{
     line-height: 0.8vw;
     font-weight: bold;
     border-radius: 4px;
+    cursor: pointer;
 }
 .searchContainer button:hover{
     background-color: red;
+    cursor: pointer;
 }
 
-<<<<<<< HEAD
-.searchInputClass{
-    width: 20vw;
-    height: 2.5vw;
-}
-
-=======
->>>>>>> 14f9e31c2d47532c1c76a3c36c85a05f73c2d340
 .characterList {
     display: flex;
     flex-direction: column;
@@ -158,6 +152,7 @@ input.searchContainer{
     align-self: flex-end;
     font-size: 7vh;
     margin-right: 2vw;
+    cursor: pointer;
 }
 .characterList button:hover {
     color: blue;
