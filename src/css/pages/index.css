@@ -1,3 +1,4 @@
+/*No es necessari un media query per pantalles de PC (grans) ja que tot el format és compatible per mobils, tauletes i escriptoris*/
 /*PRINCIPALS*/
 * {
     box-sizing: border-box;
@@ -28,6 +29,7 @@ html{
 
 body{
     width: 95%;
+    height: 110vh;
     margin-bottom: 10px;
     margin-top: 2px;
     background-color: transparent;
@@ -72,26 +74,38 @@ main {
     margin-top: 2vw;
     margin-bottom: 2vw;
     background-color: transparent;
+    height: 200% !important;
+
+}
+input.searchContainer{
+    background-color: white;
 }
 
 .searchContainer button{
     background-color: green;
-    width: 7vw;
-    height: auto;
+    margin-left: 1.9vw;
+    width: 8vw;
+    height: 4vw;
+    justify-self: center;
+    align-self: center;
     color: black;
     font-size: 1vw;
-    line-height: 1vw;
+    line-height: 0.8vw;
     font-weight: bold;
+    border-radius: 4px;
 }
 .searchContainer button:hover{
     background-color: red;
 }
 
+<<<<<<< HEAD
 .searchInputClass{
     width: 20vw;
     height: 2.5vw;
 }
 
+=======
+>>>>>>> 14f9e31c2d47532c1c76a3c36c85a05f73c2d340
 .characterList {
     display: flex;
     flex-direction: column;
@@ -125,6 +139,7 @@ main {
     width: 40vw;
     display: flex;
     flex-direction: row;
+    margin-top: 3vw;
 }
 
 .characterContainer section{
@@ -153,6 +168,7 @@ main {
     flex-direction: row;
     background-color: rgb(235, 230, 230);
     width: 70vw;
+    margin-top: 3vw;
 }
 
 .characterContainer2 .left{
@@ -166,12 +182,23 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
-/************************************************************************************************************************/
-/***************************************************@MEDIA PC*************************************************************/
-/************************************************************************************************************************/
-@media (min-width: 700px){
-    *{
-        background-color: white;
-    }
+/*FOOTER*/
+.section {
+    background-color: transparent;
+    width: 100%;
+    margin-top: 20vw;
 }
+.section *{
+    word-wrap: break-word;
+    margin-left: 1vw;
+    font-size: 1.3vw;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+.section h2{
+    font-size: 1vw;
+}
+/*No es necessari un media query per pantalles de PC (grans) ja que tot el format és compatible per mobils, tauletes i escriptoris*/

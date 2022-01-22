@@ -4,7 +4,7 @@
   "description": "Pràctica 2 Projectes Web",
   "main": "index.js",
   "scripts": {
-    "build": "npm run delete && npm run deletefolder && npm run createfolder && npm run createfolder2 && npm run minifier && npm run copymedia && npm run cssmini && npm run cssmini-normalize && npm run jsmini1 && npm run jsmini2 && npm run jsmini3 &&  npm run checklinks",
+    "build": "npm run delete && npm run deletefolder && npm run createfolder && npm run createfolder2 && npm run minifier && npm run copymedia && npm run cssmini && npm run cssmini-normalize && npm run jsmini1 && npm run jsmini2 && npm run jsmini3 && npm run copyfonts && npm run checklinks",
     "start": "node app.js",
     "deletefolder": "Rmdir /S/Q .\\dist",
     "createfolder": "mkdir .\\dist\\js\\pages",
@@ -17,7 +17,8 @@
     "jsmini2": "uglifyjs .\\src\\js\\components\\searchForm.js -o .\\dist\\js\\components\\searchForm.js",
     "jsmini3": "uglifyjs .\\src\\js\\components\\heroecontainer.js -o .\\dist\\js\\components\\heroecontainer.js",
     "minifier": "html-minifier --input-dir src --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-js true --minify-css true",
-    "copymedia": "xcopy /i/s/r/h/y .\\src\\media\\ .\\dist\\media"
+    "copymedia": "xcopy /i/s/r/h/y .\\src\\media\\ .\\dist\\media",
+    "copyfonts": "xcopy /i/s/r/h/y .\\src\\css\\fonts\\ .\\dist\\css\\fonts"
   },
   "repository": {
     "type": "git",
@@ -27,11 +28,11 @@
     "P2",
     "projweb"
   ],
-  "author": "Pau Hinojosa, Àlvaro Martinez, Albert Garangou",
+  "author": "Pau Hinojosa, Álvaro Martinez, Albert Garangou",
   "license": "ISC",
   "homepage": "https://github.com/bertugarangou/web-p2#readme",
   "dependencies": {
-    "cors": "^2.8.5",
+    "cors": "2.8.5",
     "express": "4.17.1"
   },
   "devDependencies": {
